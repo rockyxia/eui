@@ -1,0 +1,115 @@
+/**********************
+Date:2016-05-31
+BuilderVersion:EUI-button v0.1.0
+CopyRight:jhxia & iflytek_EUED
+***********************/
+/* base btn */
+.eui-btn {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+	vertical-align: middle;
+	line-height: normal;
+	white-space: nowrap;
+	text-align: center;
+	cursor: pointer;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: inherit;
+	font-size: 100%;
+	padding: 0.3em 1em;
+	color: #444; /* rgba not supported (IE 8) */
+	color: rgba(0, 0, 0, 0.80); /* rgba supported */
+	border: 1px solid #ededed;
+	background-color: #fafafa;
+	text-decoration: none;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+/* Firefox edit */
+.eui-btn::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+.eui-btn-hover,
+.eui-btn:hover,
+.eui-btn:focus {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000',GradientType=0);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0,0,0, 0.05)), to(rgba(0,0,0, 0.10)));
+	background-image: -webkit-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+	background-image: -moz-linear-gradient(top, rgba(0,0,0, 0.05) 0%, rgba(0,0,0, 0.10));
+	background-image: -o-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+	background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+}
+.eui-btn:focus {
+	outline: 0;
+}
+.eui-btn-active,
+.eui-btn:active {
+	box-shadow: 0 0 0 1px rgba(0,0,0, 0.10) inset, 0 0 6px rgba(0,0,0, 0.05) inset;
+	border-color: #000\9;
+}
+.eui-btn[disabled],
+.eui-btn-disabled,
+.eui-btn-disabled:hover,
+.eui-btn-disabled:focus,
+.eui-btn-disabled:active {
+	border: none;
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	filter: alpha(opacity=40);
+	-khtml-opacity: 0.40;
+	-moz-opacity: 0.40;
+	opacity: 0.40;
+	cursor: not-allowed;
+	box-shadow: none;
+}
+.eui-btn-primary,
+a.eui-btn-primary {
+	background-color: #1f8dd6;
+	border-color: #1f8dd6;
+	color: #fff;
+}
+.eui-btn-success,
+a.eui-btn-success {
+	background-color:#5cb85c;
+	border-color: #5cb85c;
+	color:#fff;
+}
+.eui-btn-info,
+a.eui-btn-info {
+	background-color:#5bc0de;
+	border-color: #5bc0de;
+	color:#fff;
+}
+.eui-btn-warning,
+a.eui-btn-warning {
+	background-color:#f0ad4e;
+	border-color: #f0ad4e;
+	color:#fff;
+}
+.eui-btn-danger,
+a.eui-btn-danger {
+	background-color:#d9534f;
+	border-color: #d9534f;
+	color:#fff;
+}
+.btn-xs {
+	font-size: 70%;
+}
+.btn-sl {
+	font-size: 85%;
+}
+.btn-lg {
+	font-size: 110%;
+}
+.btn-xl {
+	font-size: 125%;
+}

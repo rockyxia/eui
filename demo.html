@@ -2,10 +2,561 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<title>EUI-常用基础、扩展性高的CSS模块库</title>
+	<link rel="shortcut icon" href="favicon.ico">
+	<link href="css/eui.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
 </head>
 
 <body>
+<div class="layout">
+	<div class="sidebar">
+		<div class="eui-menu eui-menu-open">
+			<a href="./" class="eui-menu-heading">EUI</a>
+			<ul>
+				<li class=" ">
+					<a href="#start">开始使用</a>
+				</li>
+				<li class="menu-item-divided ">
+					<a href="#button">按钮</a>
+				</li>
+				<li class="">
+					<a href="#form">表单</a>
+				</li>
+				<li class=" ">
+					<a href="#table">表格</a>
+				</li>
+				<li class=" ">
+					<a href="#menu">菜单</a>
+				</li>
+				
+				<li class="menu-item-divided ">
+					<a href="javascript:;">Blog</a>
+				</li>
+				<li>
+					<a href="https://github.com/rockyxia/eui/" target="_blank">Github</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="main">
+		<div class="header">
+			<h1><span>EUI</span>.CSS</h1>
+			<small>常用基础、扩展性高的CSS模块库</small>
+		</div>
 
+		<!--如何开始-->
+		<a name="start"></a>
+		<div class="module">
+			<h2 class="clearfix">引入EUI<small>下一个WEB项目就从EUI开始吧</small></h2>
+			<div class="item">
+				<h3>页面中引入EUI</h3>
+				<p>在你自己项目的样式表之前使用<code>&lt;link&gt;</code>引入EUI到你页面的<code>&lt;head&gt;</code>中。</p>
+				<pre>&lt;link rel="stylesheet" href="../css/eui-min.css"&gt;</pre>
+				<p>EUI引用路径修改成你自己的。</p>
+				<p><a href="https://github.com/rockyxia/eui" target="_blank" title="从Githup上下载EUI" class="content-link">从Githup上下载EUI</a></p>
+				<p>EUI是基于<a href="https://github.com/rockyxia/base" title="浏览器效果统一基础样式" target="_blank" class="content-link">base.css</a>添加了HTML元素的布局和样式，以及常用的UI组件。EUI提供最基础的样式，具有很高的扩展性，鼓励你基于此写出自己的样式。</p>
+			</div>
+		</div>
+		<!--/如何开始-->
+
+		<!--按钮-->
+		<a name="button"></a>
+		<div class="module">
+			<h2 class="clearfix"><button class="eui-btn btn-xs eui-btn-success fr">收起</button>按钮<small>简单的CSS按钮样式</small></h2>
+			<div class="item">
+				<h3>默认状态</h3>
+				<p>给 <code>&lt;a&gt;</code> 或者 <code>&lt;button&gt;</code> 元素添加class <code>eui-btn</code>，可实现默认按钮样式。</p>
+				<a href="javascript:;" class="eui-btn">EUI按钮</a>
+				<button class="eui-btn">EUI按钮</button>
+				<pre>&lt;a href="#" class="<span>eui-btn</span>"&gt;EUI按钮&lt;/a&gt;<br>&lt;button class="<span>eui-btn</span>"&gt;EUI按钮&lt;/button&gt;</pre>
+			</div>
+			<div class="item">
+				<h3>禁用状态</h3>
+				<p>先添加class <code>eui-btn</code>，再加 <code>eui-btn-disabled</code>。 </p>
+				<a href="javascript:;" class="eui-btn eui-btn-disabled">EUI按钮禁用</a>
+				<button class="eui-btn eui-btn-disabled">EUI按钮禁用</button>
+				<pre>&lt;a href="#" class="<span>eui-btn eui-btn-disabled</span>"&gt;EUI按钮禁用&lt;/a&gt;<br>&lt;button class="<span>eui-btn eui-btn-disabled</span>"&gt;EUI按钮禁用&lt;/button&gt;</pre>
+			</div>
+			<div class="item">
+				<h3>激活状态</h3>
+				<p>先添加class <code>eui-btn</code>，再加 <code>eui-btn-active</code>，就可以看到“激活/按下”的效果。 </p>
+				<a href="javascript:;" class="eui-btn eui-btn-active">EUI按钮激活</a>
+				<button class="eui-btn eui-btn-active">EUI按钮激活</button>
+				<pre>&lt;a href="#" class="<span>eui-btn eui-btn-active</span>"&gt;EUI按钮激活&lt;/a&gt;<br>&lt;button class="<span>eui-btn eui-btn-active</span>"&gt;EUI按钮激活&lt;/button&gt;</pre>
+			</div>
+			<div class="item">
+				<h3>常用的几种状态</h3>
+				<p>根据常用状态，我们预定义了6种按钮样式：</p>
+				<button class="eui-btn">默认样式</button>
+				<button class="eui-btn eui-btn-primary">首选项(Primary)</button>
+				<button class="eui-btn eui-btn-success">成功(Success)</button>
+				<button class="eui-btn eui-btn-info">一般信息(Info)</button>
+				<button class="eui-btn eui-btn-warning">警告(Warning)</button>
+				<button class="eui-btn eui-btn-danger">危险(Danger)</button>
+				<pre>&lt;button class="<span>eui-btn</span>"&gt;默认样式&lt;/button&gt;<br>&lt;button class="<span>eui-btn eui-btn-primary</span>"&gt;首选项(Primary)&lt;/button&gt;<br>&lt;button class="<span>eui-btn eui-btn-success</span>"&gt;成功(Success)&lt;/button&gt;<br>&lt;button class="<span>eui-btn eui-btn-info</span>"&gt;一般信息(Info)&lt;/button&gt;<br>&lt;button class="<span>eui-btn eui-btn-warning</span>"&gt;警告(Warning)&lt;/button&gt;<br>&lt;button class="<span>eui-btn eui-btn-danger</span>"&gt;危险(Danger)&lt;/button&gt;</pre>
+				<p><strong>自定义：</strong><code>eui-btn</code> 只提供最基础简单的样式，自定义新的按钮非常的便捷，在添加class <code>eui-btn</code> 的基础上，再添加自己的class，只需要定义背景颜色、边框颜色以及字体颜色就行了。上面除了默认样式之外的其他5种预定义样式就是这样实现的。</p>
+			</div>
+			<div class="item">
+				<h3>自定义大小</h3>
+				<p>根据常用状态，我们预定义了5种大小的按钮：</p>
+				<button class="eui-btn btn-xs">超小按钮</button>
+				<button class="eui-btn btn-sl">小按钮</button>
+				<button class="eui-btn">正常按钮</button>
+				<button class="eui-btn btn-lg">大按钮</button>
+				<button class="eui-btn btn-xl">超大按钮</button>
+				<pre>&lt;button class="<span>eui-btn btn-xs</span>"&gt;很小按钮&lt;/button&gt;<br>&lt;button class="<span>eui-btn btn-sl</span>"&gt;小按钮&lt;/button&gt;<br>&lt;button class="<span>eui-btn</span>"&gt;正常按钮&lt;/button&gt;<br>&lt;button class="<span>eui-btn btn-lg</span>"&gt;大按钮&lt;/button&gt;<br>&lt;button class="<span>eui-btn btn-xl</span>"&gt;很大按钮&lt;/button&gt;</pre>
+			</div>
+			<div class="item">
+				<h3>添加图标</h3>
+				<p>EUI提供了一套讯飞教育云项目的图标可以直接使用，也可以引入其他第三方框架的图标。在 <code>eui-btn</code> 里加个 <code>&lt;i&gt;</code> 元素。</p>
+			</div>
+		</div>
+		<!--/按钮-->
+
+		<!--表单-->
+		<a name="form"></a>
+		<div class="module">
+			<h2><button class="eui-btn btn-xs eui-btn-success fr">收起</button>表单<small>简单的CSS表单样式</small></h2>
+			<div class="item">
+				<h3>默认表单</h3>
+				<p>给form添加class <code>eui-form</code> 就可以创建默认的单行表单。</p>
+				<form class="eui-form">
+					<fieldset>
+						<legend>一个简单的单行表单</legend>
+						<input type="text" placeholder="帐号">
+						<input type="password" placeholder="密码">
+						<label for="remember">
+							<input id="remember" type="checkbox"> 记住我
+						</label>
+						<button type="submit" class="eui-btn eui-btn-primary">登录</button>
+					</fieldset>
+				</form>
+				<pre>&lt;form class="<span>eui-form</span>"&gt;<br>  &lt;fieldset&gt;<br>    &lt;legend&gt;一个简单的单行表单&lt;/legend&gt;<br>    &lt;input type="text" placeholder="帐号"&gt;<br>    &lt;input type="password" placeholder="密码"&gt;<br>    &lt;label for="remember"&gt;<br>      &lt;input id="remember" type="checkbox"&gt; 记住我<br>    &lt;/label&gt;<br>    &lt;button type="submit" class="<span>eui-btn eui-btn-primary</span>"&gt;登录&lt;/button&gt;<br>  &lt;/fieldset&gt;<br>&lt;/form&gt;</pre>
+			</div>
+			<div class="item">
+				<h3>上下式</h3>
+				<p>先添加class <code>eui-form</code>，再加 <code>eui-form-vertical</code>。</p>
+				<form class="eui-form eui-form-vertical">
+					<fieldset>
+						<legend>上下式表单</legend>
+						<label for="username">帐号：</label>
+						<input id="username" type="text" placeholder="帐号">
+						<label for="password">密码：</label>
+						<input id="password" type="password" placeholder="密码">
+						<label for="state">类型：</label>
+						<select id="state">
+							<option>学生</option>
+							<option>教师</option>
+							<option>管理员</option>
+						</select>
+						<label for="remember1" class="eui-block">
+							<input id="remember1" type="checkbox"> 记住我
+						</label>
+						<button type="submit" class="eui-btn eui-btn-primary">登录</button>
+					</fieldset>
+				</form>
+				<pre>&lt;form class="<span>eui-form eui-form-vertical</span>"&gt;<br>  &lt;fieldset&gt;<br>    &lt;legend&gt;上下式表单&lt;/legend&gt;<br>    &lt;label for="username"&gt;帐号：&lt;/label&gt;<br>    &lt;input id="username" type="text" placeholder="帐号"&gt;<br>    &lt;label for="password"&gt;密码：&lt;/label&gt;<br>    &lt;input id="password" type="password" placeholder="密码"&gt;<br>    &lt;label for="state"&gt;类型：&lt;/label&gt;<br>    &lt;select id="state"&gt;<br>      &lt;option&gt;学生&lt;/option&gt;<br>      &lt;option&gt;教师&lt;/option&gt;<br>      &lt;option&gt;管理员&lt;/option&gt;<br>    &lt;/select&gt;<br>    &lt;label for="remember1" class="<span>eui-block</span>"&gt;<br>      &lt;input id="remember1" type="checkbox"&gt; 记住我<br>    &lt;/label&gt;<br>    &lt;button type="submit" class="<span>eui-btn eui-btn-primary</span>"&gt;登录&lt;/button&gt;<br>  &lt;/fieldset&gt;<br>&lt;/form&gt;</pre>
+			</div>
+			<div class="item">
+				<h3>左右式</h3>
+				<p>先添加class <code>eui-form</code>，再加 <code>eui-form-aligned</code>。</p>
+				<form class="eui-form eui-form-aligned">
+					<fieldset>
+						<div class="eui-control-group">
+							<label for="name">帐号</label><input id="name" type="text" placeholder="帐号">
+						</div>
+						<div class="eui-control-group">
+							<label for="password">密码</label><input id="password" type="password" placeholder="密码">
+						</div>
+						<div class="eui-control-group">
+							<label for="email">邮箱地址</label><input id="email" type="text" placeholder="邮箱地址">
+						</div>
+						<div class="eui-control-group">
+							<label for="langword">很长很长的文字是什么样的</label><input id="langword" type="text" placeholder="输入框">
+						</div>
+						<div class="eui-controls">
+							<label for="cb" class="eui-block">
+								<input id="cb" type="checkbox"> 我已阅读条款和条件
+							</label>
+							<button type="submit" class="eui-btn eui-btn-primary">提交</button>
+						</div>
+					</fieldset>
+				</form>
+				<pre>&lt;form class="<span>eui-form eui-form-aligned</span>"&gt;<br>  &lt;fieldset&gt;<br>    &lt;div class="<span>eui-control-group</span>"&gt;<br>      &lt;label for="name"&gt;帐号&lt;/label&gt;&lt;input id="name" type="text" placeholder="帐号"&gt;<br>    &lt;/div&gt;<br>    &lt;div class="<span>eui-control-group</span>"&gt;<br>      &lt;label for="password"&gt;密码&lt;/label&gt;&lt;input id="password" type="password" placeholder="密码"&gt;<br>    &lt;/div&gt;<br>    &lt;div class="<span>eui-control-group</span>"&gt;<br>      &lt;label for="email"&gt;邮箱地址&lt;/label&gt;&lt;input id="email" type="text" placeholder="邮箱地址"&gt;<br>    &lt;/div&gt;<br>    &lt;div class="<span>eui-control-group</span>"&gt;<br>      &lt;label for="langword"&gt;很长很长的文字是什么样的&lt;/label&gt;&lt;input id="langword" type="text" placeholder="输入框"&gt;<br>    &lt;/div&gt;<br>    &lt;div class="<span>eui-controls</span>"&gt;<br>      &lt;label for="cb" class="<span>eui-block</span>"&gt;<br>        &lt;input id="cb" type="checkbox"&gt; 我已阅读条款和条件<br>      &lt;/label&gt;<br>      &lt;button type="submit" class="<span>eui-btn eui-btn-primary</span>"&gt;提交&lt;/button&gt;<br>    &lt;/div&gt;<br>  &lt;/fieldset&gt;<br>&lt;/form&gt;</pre>
+			</div>
+			<div class="item">
+				<h3>input大小</h3>
+				<p>EUI为Input 元素设置了6种大小，添加class： <code>eui-input-*</code> 就可以了。</p>
+				<p>6种大小分别是：100%<code>eui-input-1</code>、75%<code>eui-input-3-4</code>、66%<code>eui-input-2-3</code>、50%<code>eui-input-1-2</code>、33%<code>eui-input-1-3</code>、25%<code>eui-input-1-4</code></p>
+				<form class="eui-form">
+					<input class="eui-input-1" type="text" placeholder=".eui-input-1"><br>
+					<input class="eui-input-3-4" type="text" placeholder=".eui-input-3-4"><br>
+					<input class="eui-input-2-3" type="text" placeholder=".eui-input-2-3"><br>
+					<input class="eui-input-1-2" type="text" placeholder=".eui-input-1-2"><br>
+					<input class="eui-input-1-3" type="text" placeholder=".eui-input-1-3"><br>
+					<input class="eui-input-1-4" type="text" placeholder=".eui-input-1-4"><br>
+				</form>
+				<pre>&lt;form class="<span>eui-form</span>"&gt;<br>  &lt;input class="<span>eui-input-1</span>" type="text" placeholder=".eui-input-1"&gt;&lt;br&gt;<br>  &lt;input class="<span>eui-input-3-4</span>" type="text" placeholder=".eui-input-3-4"&gt;&lt;br&gt;<br>  &lt;input class="<span>eui-input-2-3</span>" type="text" placeholder=".eui-input-2-3"&gt;&lt;br&gt;<br>  &lt;input class="<span>eui-input-1-2</span>" type="text" placeholder=".eui-input-1-2"&gt;&lt;br&gt;<br>  &lt;input class="<span>eui-input-1-3</span>" type="text" placeholder=".eui-input-1-3"&gt;&lt;br&gt;<br>  &lt;input class="<span>eui-input-1-4</span>" type="text" placeholder=".eui-input-1-4"&gt;&lt;br&gt;<br>&lt;/form&gt;</pre>
+			</div>
+			<div class="item">
+				<h3>input分组</h3>
+				<p>标签 <code>&lt;fieldset&gt;</code> 加class <code>eui-group</code> 然后把input或textarea包起来，可实现分组的效果。</p>
+				<form class="eui-form">
+					<fieldset class="eui-group">
+						<input type="text" class="eui-input-1-2" placeholder="帐号">
+						<input type="password" class="eui-input-1-2" placeholder="密码">
+						<input type="email" class="eui-input-1-2" placeholder="邮箱">
+					</fieldset>
+					<fieldset class="eui-group">
+						<input type="text" class="eui-input-1-2" placeholder="另一个组">
+						<textarea class="eui-input-1-2" rows="3" placeholder="多行填空"></textarea>
+						<input type="text" class="eui-input-1-2" placeholder="其他选项">
+					</fieldset>
+					<button type="submit" class="eui-btn eui-input-1-2 eui-btn-primary">注 册</button>
+				</form>
+				<pre>&lt;form class="<span>eui-form</span>"&gt;<br>  &lt;fieldset class="<span>eui-group</span>"&gt;<br>    &lt;input type="text" class="<span>eui-input-1-2</span>" placeholder="帐号"&gt;<br>    &lt;input type="password" class="<span>eui-input-1-2</span>" placeholder="密码"&gt;<br>    &lt;input type="email" class="<span>eui-input-1-2</span>" placeholder="邮箱"&gt;<br>  &lt;/fieldset&gt;<br>  &lt;fieldset class="<span>eui-group</span>"&gt;<br>    &lt;input type="text" class="<span>eui-input-1-2</span>" placeholder="另一个组"&gt;<br>    &lt;textarea class="<span>eui-input-1-2</span>" rows="3" placeholder="多行填空"&gt;&lt;/textarea&gt;<br>    &lt;input type="text" class="<span>eui-input-1-2</span>" placeholder="其他选项"&gt;<br>  &lt;/fieldset&gt;<br>&lt;/form&gt;</pre>
+			</div>
+			<div class="item">
+				<h3>禁用状态</h3>
+				<p>添加 <code>disabled</code> 属性，禁止输入，禁止复制。</p>
+				<form class="eui-form">
+					<input type="text" placeholder="这个被禁用了" disabled>
+					<textarea rows="2" placeholder="这个也被禁用了" disabled></textarea>
+				</form>
+				<pre>&lt;form class="<span>eui-form</span>"&gt;<br>  &lt;input type="text" placeholder="这个被禁用了" <span>disabled</span>&gt;<br>  &lt;textarea rows="2" placeholder="这个也被禁用了" <span>disabled</span>&gt;&lt;/textarea&gt;<br>&lt;/form&gt;</pre>
+			</div>
+			<div class="item">
+				<h3>只读状态</h3>
+				<p>添加 <code>readonly</code> 属性，禁止输入，但是可以选择复制。</p>
+				<form class="eui-form">
+					<input type="text" placeholder="这个是只读的" readonly>
+					<textarea rows="2" placeholder="这个也是只读的" readonly></textarea>
+				</form>
+				<pre>&lt;form class="<span>eui-form</span>"&gt;<br>  &lt;input type="text" placeholder="这个是只读的" <span>readonly</span>&gt;<br>  &lt;textarea rows="2" placeholder="这个也是只读的" <span>readonly</span>&gt;&lt;/textarea&gt;<br>&lt;/form&gt;</pre>
+			</div>
+			<div class="item">
+				<h3>圆角效果</h3>
+				<p>添加class <code>eui-input-rounded</code> 可实现圆角效果。</p>
+				<form class="eui-form">
+					<input type="text" class="eui-input-rounded">
+					<button class="eui-btn eui-input-rounded">查询</button>
+				</form>
+				<pre>&lt;form class="<span>eui-form</span>"&gt;<br>  &lt;input type="text" class="<span>eui-input-rounded</span>"&gt;<br>  &lt;button class="<span>eui-btn eui-input-rounded</span>"&gt;查询&lt;/button&gt;<br>&lt;/form&gt;</pre>
+			</div>
+		</div>
+		<!--/表单-->
+
+		<!--表格-->
+		<a name="table"></a>
+		<div class="module">
+			<h2><button class="eui-btn btn-xs eui-btn-success fr">收起</button>表格<small>简单的CSS表格样式</small></h2>
+			<div class="item">
+				<h3>默认表格</h3>
+				<p>给table添加class <code>eui-table</code> 可以添加默认的padding、border，同时突出表头。</p>
+				<table class="eui-table">
+				<thead>
+					<tr>
+						<th>序号</th>
+						<th>产品</th>
+						<th>任务名称</th>
+						<th>项目名称</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>智慧课堂</td>
+						<td>教师机</td>
+						<td>教学通及中心运营平台4.0</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>基线</td>
+						<td>DEMO畅言</td>
+						<td>科大讯飞区域教育 云平台4.0</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>英语考试</td>
+						<td>智能制卷工具</td>
+						<td>教育考试题库系统 1.0</td>
+					</tr>
+				</tbody>
+				</table>
+				<pre>&lt;table class="<span>eui-table</span>"&gt;<br>  &lt;thead&gt;<br>    &lt;tr&gt;<br>      &lt;th&gt;序号&lt;/th&gt;<br>      &lt;th&gt;产品&lt;/th&gt;<br>      &lt;th&gt;任务名称&lt;/th&gt;<br>      &lt;th&gt;项目名称&lt;/th&gt;<br>    &lt;/tr&gt;<br>  &lt;/thead&gt;<br>  &lt;tbody&gt;<br>    &lt;tr&gt;<br>      &lt;td&gt;1&lt;/td&gt;<br>      &lt;td&gt;智慧课堂&lt;/td&gt;<br>      &lt;td&gt;教师机&lt;/td&gt;<br>      &lt;td&gt;教学通及中心运营平台4.0&lt;/td&gt;<br>    &lt;/tr&gt;<br>    &lt;tr&gt;<br>      &lt;td&gt;2&lt;/td&gt;<br>      &lt;td&gt;基线&lt;/td&gt;<br>      &lt;td&gt;DEMO畅言&lt;/td&gt;<br>      &lt;td&gt;科大讯飞区域教育 云平台4.0&lt;/td&gt;<br>    &lt;/tr&gt;<br>    &lt;tr&gt;<br>      &lt;td&gt;3&lt;/td&gt;<br>      &lt;td&gt;英语考试&lt;/td&gt;<br>      &lt;td&gt;智能制卷工具&lt;/td&gt;<br>      &lt;td&gt;教育考试题库系统 1.0&lt;/td&gt;<br>    &lt;/tr&gt;<br>  &lt;/tbody&gt;<br>&lt;/table&gt;</pre>
+			</div>
+			<div class="item">
+				<h3>有边框的表格</h3>
+				<p>先添加class <code>eui-table</code>，再加 <code>eui-table-bordered</code>。</p>
+				<table class="eui-table eui-table-bordered">
+				<thead>
+					<tr>
+						<th>序号</th>
+						<th>产品</th>
+						<th>任务名称</th>
+						<th>项目名称</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>智慧课堂</td>
+						<td>教师机</td>
+						<td>教学通及中心运营平台4.0</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>基线</td>
+						<td>DEMO畅言</td>
+						<td>科大讯飞区域教育 云平台4.0</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>英语考试</td>
+						<td>智能制卷工具</td>
+						<td>教育考试题库系统 1.0</td>
+					</tr>
+				</tbody>
+				</table>
+				<pre>&lt;table class="<span>eui-table eui-table-bordered</span>"&gt;<br>  &lt;thead&gt;<br>    &lt;tr&gt;<br>      &lt;th&gt;序号&lt;/th&gt;<br>      &lt;th&gt;产品&lt;/th&gt;<br>      &lt;th&gt;任务名称&lt;/th&gt;<br>      &lt;th&gt;项目名称&lt;/th&gt;<br>    &lt;/tr&gt;<br>  &lt;/thead&gt;<br>  &lt;tbody&gt;<br>    &lt;tr&gt;<br>      &lt;td&gt;1&lt;/td&gt;<br>      &lt;td&gt;智慧课堂&lt;/td&gt;<br>      &lt;td&gt;教师机&lt;/td&gt;<br>      &lt;td&gt;教学通及中心运营平台4.0&lt;/td&gt;<br>    &lt;/tr&gt;<br>    &lt;tr&gt;<br>      &lt;td&gt;2&lt;/td&gt;<br>      &lt;td&gt;基线&lt;/td&gt;<br>      &lt;td&gt;DEMO畅言&lt;/td&gt;<br>      &lt;td&gt;科大讯飞区域教育 云平台4.0&lt;/td&gt;<br>    &lt;/tr&gt;<br>    &lt;tr&gt;<br>      &lt;td&gt;3&lt;/td&gt;<br>      &lt;td&gt;英语考试&lt;/td&gt;<br>      &lt;td&gt;智能制卷工具&lt;/td&gt;<br>      &lt;td&gt;教育考试题库系统 1.0&lt;/td&gt;<br>    &lt;/tr&gt;<br>  &lt;/tbody&gt;<br>&lt;/table&gt;</pre>
+			</div>
+			<div class="item">
+				<h3>有水平边框的表格</h3>
+				<p>先添加class <code>eui-table</code>，再加 <code>eui-table-horizontal</code>。</p>
+				<table class="eui-table eui-table-horizontal">
+				<thead>
+					<tr>
+						<th>序号</th>
+						<th>产品</th>
+						<th>任务名称</th>
+						<th>项目名称</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>智慧课堂</td>
+						<td>教师机</td>
+						<td>教学通及中心运营平台4.0</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>基线</td>
+						<td>DEMO畅言</td>
+						<td>科大讯飞区域教育 云平台4.0</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>英语考试</td>
+						<td>智能制卷工具</td>
+						<td>教育考试题库系统 1.0</td>
+					</tr>
+				</tbody>
+				</table>
+				<pre>&lt;table class="<span>eui-table eui-table-horizontal</span>"&gt;<br>  &lt;thead&gt;<br>    &lt;tr&gt;<br>      &lt;th&gt;序号&lt;/th&gt;<br>      &lt;th&gt;产品&lt;/th&gt;<br>      &lt;th&gt;任务名称&lt;/th&gt;<br>      &lt;th&gt;项目名称&lt;/th&gt;<br>    &lt;/tr&gt;<br>  &lt;/thead&gt;<br>  &lt;tbody&gt;<br>    &lt;tr&gt;<br>      &lt;td&gt;1&lt;/td&gt;<br>      &lt;td&gt;智慧课堂&lt;/td&gt;<br>      &lt;td&gt;教师机&lt;/td&gt;<br>      &lt;td&gt;教学通及中心运营平台4.0&lt;/td&gt;<br>    &lt;/tr&gt;<br>    &lt;tr&gt;<br>      &lt;td&gt;2&lt;/td&gt;<br>      &lt;td&gt;基线&lt;/td&gt;<br>      &lt;td&gt;DEMO畅言&lt;/td&gt;<br>      &lt;td&gt;科大讯飞区域教育 云平台4.0&lt;/td&gt;<br>    &lt;/tr&gt;<br>    &lt;tr&gt;<br>      &lt;td&gt;3&lt;/td&gt;<br>      &lt;td&gt;英语考试&lt;/td&gt;<br>      &lt;td&gt;智能制卷工具&lt;/td&gt;<br>      &lt;td&gt;教育考试题库系统 1.0&lt;/td&gt;<br>    &lt;/tr&gt;<br>  &lt;/tbody&gt;<br>&lt;/table&gt;</pre>
+			</div>
+			<div class="item">
+				<h3>条纹状表格</h3>
+				<p>为了让比较大的表格看起来容易区分行。隔行添加class <code>eui-table-odd</code> 可实现条纹状的效果。</p>
+				<p><strong>注意: </strong>支持CSS3 <a href="http://caniuse.com/#search=nth-child" target="_blank">伪类选择器 <code>nth-child</code></a> 的浏览器，给table添加class <code>eui-table-striped</code> 就可以自动生成条纹状效果，IE8及以下版本不支持。 </p>
+				<table class="eui-table">
+				<thead>
+					<tr>
+						<th>序号</th>
+						<th>产品</th>
+						<th>任务名称</th>
+						<th>项目名称</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="eui-table-odd">
+						<td>1</td>
+						<td>智慧课堂</td>
+						<td>教师机</td>
+						<td>教学通及中心运营平台4.0</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>基线</td>
+						<td>DEMO畅言</td>
+						<td>科大讯飞区域教育 云平台4.0</td>
+					</tr>
+					<tr class="eui-table-odd">
+						<td>3</td>
+						<td>英语考试</td>
+						<td>智能制卷工具</td>
+						<td>教育考试题库系统 1.0</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>架构平台</td>
+						<td>讯飞教育开放平台</td>
+						<td>畅言基础服务平台4.0</td>
+					</tr>
+				</tbody>
+				</table>
+				<pre>&lt;table class="<span>eui-table</span>"&gt;<br>  &lt;thead&gt;<br>    &lt;tr&gt;<br>      &lt;th&gt;序号&lt;/th&gt;<br>      &lt;th&gt;产品&lt;/th&gt;<br>      &lt;th&gt;任务名称&lt;/th&gt;<br>      &lt;th&gt;项目名称&lt;/th&gt;<br>    &lt;/tr&gt;<br>  &lt;/thead&gt;<br>  &lt;tbody&gt;<br>    &lt;tr  class="<span>eui-table-odd</span>"&gt;<br>      &lt;td&gt;1&lt;/td&gt;<br>      &lt;td&gt;智慧课堂&lt;/td&gt;<br>      &lt;td&gt;教师机&lt;/td&gt;<br>      &lt;td&gt;教学通及中心运营平台4.0&lt;/td&gt;<br>    &lt;/tr&gt;<br>    &lt;tr&gt;<br>      &lt;td&gt;2&lt;/td&gt;<br>      &lt;td&gt;基线&lt;/td&gt;<br>      &lt;td&gt;DEMO畅言&lt;/td&gt;<br>      &lt;td&gt;科大讯飞区域教育 云平台4.0&lt;/td&gt;<br>    &lt;/tr&gt;<br>    &lt;tr  class="<span>eui-table-odd</span>"&gt;<br>      &lt;td&gt;3&lt;/td&gt;<br>      &lt;td&gt;英语考试&lt;/td&gt;<br>      &lt;td&gt;智能制卷工具&lt;/td&gt;<br>      &lt;td&gt;教育考试题库系统 1.0&lt;/td&gt;<br>    &lt;/tr&gt;<br>    &lt;tr&gt;<br>      &lt;td&gt;4&lt;/td&gt;<br>      &lt;td&gt;架构平台&lt;/td&gt;<br>      &lt;td&gt;讯飞教育开放平台&lt;/td&gt;<br>      &lt;td&gt;畅言基础服务平台4.0&lt;/td&gt;<br>    &lt;/tr&gt;<br>  &lt;/tbody&gt;<br>&lt;/table&gt;</pre>
+			</div>
+			<div class="item">
+				<h3>鼠标悬停</h3>
+				<p>先添加class <code>eui-table</code>，再加 <code>eui-table-hover</code>。</p>
+				<table class="eui-table eui-table-hover">
+				<thead>
+					<tr>
+						<th>序号</th>
+						<th>产品</th>
+						<th>任务名称</th>
+						<th>项目名称</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>智慧课堂</td>
+						<td>教师机</td>
+						<td>教学通及中心运营平台4.0</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>基线</td>
+						<td>DEMO畅言</td>
+						<td>科大讯飞区域教育 云平台4.0</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>英语考试</td>
+						<td>智能制卷工具</td>
+						<td>教育考试题库系统 1.0</td>
+					</tr>
+				</tbody>
+				</table>
+				<pre>&lt;table class="<span>eui-table eui-table-hover</span>"&gt;<br>  &lt;thead&gt;<br>    &lt;tr&gt;<br>      &lt;th&gt;序号&lt;/th&gt;<br>      &lt;th&gt;产品&lt;/th&gt;<br>      &lt;th&gt;任务名称&lt;/th&gt;<br>      &lt;th&gt;项目名称&lt;/th&gt;<br>    &lt;/tr&gt;<br>  &lt;/thead&gt;<br>  &lt;tbody&gt;<br>    &lt;tr&gt;<br>      &lt;td&gt;1&lt;/td&gt;<br>      &lt;td&gt;智慧课堂&lt;/td&gt;<br>      &lt;td&gt;教师机&lt;/td&gt;<br>      &lt;td&gt;教学通及中心运营平台4.0&lt;/td&gt;<br>    &lt;/tr&gt;<br>    &lt;tr&gt;<br>      &lt;td&gt;2&lt;/td&gt;<br>      &lt;td&gt;基线&lt;/td&gt;<br>      &lt;td&gt;DEMO畅言&lt;/td&gt;<br>      &lt;td&gt;科大讯飞区域教育 云平台4.0&lt;/td&gt;<br>    &lt;/tr&gt;<br>    &lt;tr&gt;<br>      &lt;td&gt;3&lt;/td&gt;<br>      &lt;td&gt;英语考试&lt;/td&gt;<br>      &lt;td&gt;智能制卷工具&lt;/td&gt;<br>      &lt;td&gt;教育考试题库系统 1.0&lt;/td&gt;<br>    &lt;/tr&gt;<br>  &lt;/tbody&gt;<br>&lt;/table&gt;</pre>
+			</div>
+		</div>
+		<!--/表格-->
+
+		<!--菜单-->
+		<a name="menu"></a>
+		<div class="module">
+			<h2><button class="eui-btn btn-xs eui-btn-success fr">收起</button>菜单<small>简单的CSS菜单样式</small></h2>
+			<div class="item">
+				<h3>纵向菜单</h3>
+				<p>菜单默认就是纵向的，添加class <code>eui-menu</code> 就可以了。为了方便扩展这里尽量少的定义默认样式。默认情况下，菜单项是容器宽度的100%，所以一般需要设置宽度或 <code>inline-block</code> 。</p>
+				<div class="eui-menu custom-restricted-width">
+					<span class="eui-menu-heading">畅言云</span>
+					<ul class="eui-menu-list">
+						<li class="eui-menu-item"><a href="#" class="eui-menu-link">首页</a></li>
+						<li class="eui-menu-item"><a href="#" class="eui-menu-link">资源</a></li>
+						<li class="eui-menu-item"><a href="#" class="eui-menu-link">空间</a></li>
+						<li class="eui-menu-item"><a href="#" class="eui-menu-link">E学校</a></li>
+						<li class="eui-menu-heading">应用中心</li>
+						<li class="eui-menu-item"><a href="#" class="eui-menu-link">撰写备课</a></li>
+						<li class="eui-menu-item"><a href="#" class="eui-menu-link">课堂授课</a></li>
+						<li class="eui-menu-item"><a href="#" class="eui-menu-link">辅导答疑</a></li>
+					</ul>
+				</div>
+				<pre>&lt;style&gt;<br>  .<span>custom-restricted-width</span> {<br>      display: inline-block;<br>      <em>/* or */</em><br>      <em>/* width: 10em; */</em><br>  }<br>&lt;/style&gt;<br>&lt;div class="<span>eui-menu custom-restricted-width</span>"&gt;<br>  &lt;span class="<span>eui-menu-heading</span>"&gt;畅言云&lt;/span&gt;<br>  &lt;ul class="<span>eui-menu-list</span>"&gt;<br>    &lt;li class="<span>eui-menu-item</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;首页&lt;/a&gt;&lt;/li&gt;<br>    &lt;li class="<span>eui-menu-item</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;资源&lt;/a&gt;&lt;/li&gt;<br>    &lt;li class="<span>eui-menu-item</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;空间&lt;/a&gt;&lt;/li&gt;<br>    &lt;li class="<span>eui-menu-item</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;E学校&lt;/a&gt;&lt;/li&gt;<br>    &lt;li class="<span>eui-menu-heading</span>"&gt;应用中心&lt;/li&gt;<br>    &lt;li class="<span>eui-menu-item</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;撰写备课&lt;/a&gt;&lt;/li&gt;<br>    &lt;li class="<span>eui-menu-item</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;课堂授课&lt;/a&gt;&lt;/li&gt;<br>    &lt;li class="<span>eui-menu-item</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;辅导答疑&lt;/a&gt;&lt;/li&gt;<br>  &lt;/ul&gt;<br>&lt;/div&gt;</pre>
+			</div>
+			<div class="item">
+				<h3>横向菜单</h3>
+				<p>先添加class <code>eui-menu</code> ，再加 <code>eui-menu-horizontal</code> 即可实现横向菜单效果，选中菜单class： <code>eui-menu-current</code> ，激活(:hover)状态class <code>eui-menu-active</code> 。可以给菜单增加一个标题使用class <code>eui-menu-heading</code> 。</p>
+				<div class="eui-menu eui-menu-horizontal">
+					<a href="#" class="eui-menu-heading">畅言云</a>
+					<ul class="eui-menu-list">
+						<li class="eui-menu-item"><a href="#" class="eui-menu-link">首页</a></li>
+						<li class="eui-menu-item eui-menu-current"><a href="#" class="eui-menu-link">资源</a></li>
+						<li class="eui-menu-item eui-menu-active"><a href="#" class="eui-menu-link">空间</a></li>
+						<li class="eui-menu-item"><a href="#" class="eui-menu-link">E学校</a></li>
+					</ul>
+				</div>
+				<pre>&lt;div class="<span>eui-menu eui-menu-horizontal</span>"&gt;<br>  &lt;a href="#" class="<span>eui-menu-heading</span>"&gt;畅言云&lt;/a&gt;<br>  &lt;ul class="<span>eui-menu-list</span>"&gt;<br>    &lt;li class="<span>eui-menu-item</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;首页&lt;/a&gt;&lt;/li&gt;<br>    &lt;li class="<span>eui-menu-item eui-menu-current</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;资源&lt;/a&gt;&lt;/li&gt;<br>    &lt;li class="<span>eui-menu-item eui-menu-active</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;空间&lt;/a&gt;&lt;/li&gt;<br>    &lt;li class="<span>eui-menu-item</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;E学校&lt;/a&gt;&lt;/li&gt;<br>  &lt;/ul&gt;<br>&lt;/div&gt;</pre>
+			</div>
+			<div class="item">
+				<h3>分隔线</h3>
+				<p>分隔线的class是 <code>eui-menu-separator</code> 。</p>
+				<div class="eui-menu eui-menu-horizontal">
+					<ul class="eui-menu-list">
+						<li class="eui-menu-item"><a href="#" class="eui-menu-link">首页</a></li>
+						<li class="eui-menu-separator"></li>
+						<li class="eui-menu-item"><a href="#" class="eui-menu-link">资源</a></li>
+						<li class="eui-menu-separator"></li>
+						<li class="eui-menu-item"><a href="#" class="eui-menu-link">空间</a></li>
+					</ul>
+				</div>
+				<div class="eui-menu custom-restricted-width">
+					<ul class="eui-menu-list">
+						<li class="eui-menu-item"><a href="#" class="eui-menu-link">首页</a></li>
+						<li class="eui-menu-separator"></li>
+						<li class="eui-menu-item"><a href="#" class="eui-menu-link">资源</a></li>
+						<li class="eui-menu-separator"></li>
+						<li class="eui-menu-item"><a href="#" class="eui-menu-link">空间</a></li>
+					</ul>
+				</div>
+				<pre>&lt;div class="<span>eui-menu eui-menu-horizontal</span>"&gt;<br>  &lt;ul class="<span>eui-menu-list</span>"&gt;<br>    &lt;li class="<span>eui-menu-item</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;首页&lt;/a&gt;&lt;/li&gt;<br>    &lt;li class="<span>eui-menu-separator</span>"&gt;&lt;/li&gt;<br>    &lt;li class="<span>eui-menu-item</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;资源&lt;/a&gt;&lt;/li&gt;<br>    &lt;li class="<span>eui-menu-separator</span>"&gt;&lt;/li&gt;<br>    &lt;li class="<span>eui-menu-item</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;空间&lt;/a&gt;&lt;/li&gt;<br>  &lt;/ul&gt;<br>&lt;/div&gt;<br><br>&lt;div class="<span>eui-menu custom-restricted-width</span>"&gt;<br>  &lt;ul class="<span>eui-menu-list</span>"&gt;<br>    &lt;li class="<span>eui-menu-item</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;首页&lt;/a&gt;&lt;/li&gt;<br>    &lt;li class="<span>eui-menu-separator</span>"&gt;&lt;/li&gt;<br>    &lt;li class="<span>eui-menu-item</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;资源&lt;/a&gt;&lt;/li&gt;<br>    &lt;li class="<span>eui-menu-separator</span>"&gt;&lt;/li&gt;<br>    &lt;li class="<span>eui-menu-item</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;空间&lt;/a&gt;&lt;/li&gt;<br>  &lt;/ul&gt;<br>&lt;/div&gt;</pre>
+			</div>
+			<div class="item">
+				<h3>下拉菜单</h3>
+				<p>下拉菜单一般需要使用JavaScript配合，推荐使用JavaScript的方法。如果不使用JavaScript，鼠标移入同样也可以实现下拉效果，只要给下拉菜单容器的父级增加样式 <code>eui-menu-allow-hover</code> 即可。样式 <code>eui-menu-has-children</code> 会给链接增加图标。本例没有使用JavaScript：</p>
+				<div class="eui-menu eui-menu-horizontal">
+					<ul class="eui-menu-list">
+						<li class="eui-menu-item eui-menu-current"><a href="#" class="eui-menu-link">首页</a></li>
+						<li class="eui-menu-item eui-menu-has-children eui-menu-allow-hover">
+							<a href="#" class="eui-menu-link">资源</a>
+							<ul class="eui-menu-children">
+								<li class="eui-menu-item"><a href="#" class="eui-menu-link">小学资源</a></li>
+								<li class="eui-menu-item"><a href="#" class="eui-menu-link">初中资源</a></li>
+								<li class="eui-menu-item"><a href="#" class="eui-menu-link">高中资源</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<pre>&lt;div class="<span>eui-menu eui-menu-horizontal</span>"&gt;<br>  &lt;ul class="<span>eui-menu-list</span>"&gt;<br>    &lt;li class="<span>eui-menu-item eui-menu-current</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;首页&lt;/a&gt;&lt;/li&gt;<br>    &lt;li class="<span>eui-menu-item eui-menu-has-children eui-menu-allow-hover</span>"&gt;<br>      &lt;a href="#" class="<span>eui-menu-link</span>"&gt;资源&lt;/a&gt;<br>      &lt;ul class="<span>eui-menu-children</span>"&gt;<br>        &lt;li class="<span>eui-menu-item</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;小学资源&lt;/a&gt;&lt;/li&gt;<br>        &lt;li class="<span>eui-menu-item</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;初中资源&lt;/a&gt;&lt;/li&gt;<br>        &lt;li class="<span>eui-menu-item</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;高中资源&lt;/a&gt;&lt;/li&gt;<br>      &lt;/ul&gt;<br>    &lt;/li&gt;<br>  &lt;/ul&gt;<br>&lt;/div&gt;</pre>
+			</div>
+			<div class="item">
+				<h3>纵向下拉菜单</h3>
+				<p>和横向下拉菜单使用方法一样，支持多级嵌套子菜单。</p>
+				<div class="eui-menu custom-restricted-width">
+					<ul class="eui-menu-list">
+						<li class="eui-menu-item eui-menu-current"><a href="#" class="eui-menu-link">首页</a></li>
+						<li class="eui-menu-item"><a href="#" class="eui-menu-link">资源</a></li>
+						<li class="eui-menu-item"><a href="#" class="eui-menu-link">空间</a></li>
+						<li class="eui-menu-item"><a href="#" class="eui-menu-link">E学校</a></li>
+						<li class="eui-menu-item eui-menu-has-children eui-menu-allow-hover">
+							<a href="#" class="eui-menu-link">更多</a>
+							<ul class="eui-menu-children">
+								<li class="eui-menu-item"><a href="#" class="eui-menu-link">应用中心</a></li>
+								<li class="eui-menu-item"><a href="#" class="eui-menu-link">撰写备课</a></li>
+								<li class="eui-menu-item eui-menu-has-children eui-menu-allow-hover">
+									<a href="#" class="eui-menu-link">更更多</a>
+									<ul class="eui-menu-children">
+										<li class="eui-menu-item"><a href="#" class="eui-menu-link">登录</a></li>
+										<li class="eui-menu-item"><a href="#" class="eui-menu-link">注册</a></li>
+										<li class="eui-menu-item"><a href="#" class="eui-menu-link">找回密码</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<pre>&lt;div class="<span>eui-menu custom-restricted-width</span>"&gt;<br>  &lt;ul class="<span>eui-menu-list</span>"&gt;<br>    &lt;li class="<span>eui-menu-item eui-menu-current</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;首页&lt;/a&gt;&lt;/li&gt;<br>    &lt;li class="<span>eui-menu-item</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;资源&lt;/a&gt;&lt;/li&gt;<br>    &lt;li class="<span>eui-menu-item</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;空间&lt;/a&gt;&lt;/li&gt;<br>    &lt;li class="<span>eui-menu-item</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;E学校&lt;/a&gt;&lt;/li&gt;<br>    &lt;li class="<span>eui-menu-item eui-menu-has-children eui-menu-allow-hover</span>"&gt;<br>      &lt;a href="#" class="<span>eui-menu-link</span>"&gt;更多&lt;/a&gt;<br>      &lt;ul class="<span>eui-menu-children</span>"&gt;<br>        &lt;li class="<span>eui-menu-item</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;应用中心&lt;/a&gt;&lt;/li&gt;<br>        &lt;li class="<span>eui-menu-item</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;撰写备课&lt;/a&gt;&lt;/li&gt;<br>        &lt;li class="<span>eui-menu-item eui-menu-has-children eui-menu-allow-hover</span>"&gt;<br>          &lt;a href="#" class="<span>eui-menu-link</span>"&gt;更更多&lt;/a&gt;<br>          &lt;ul class="<span>eui-menu-children</span>"&gt;<br>            &lt;li class="<span>eui-menu-item</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;登录&lt;/a&gt;&lt;/li&gt;<br>            &lt;li class="<span>eui-menu-item</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;注册&lt;/a&gt;&lt;/li&gt;<br>            &lt;li class="<span>eui-menu-item</span>"&gt;&lt;a href="#" class="<span>eui-menu-link</span>"&gt;找回密码&lt;/a&gt;&lt;/li&gt;<br>          &lt;/ul&gt;<br>        &lt;/li&gt;<br>      &lt;/ul&gt;<br>  &lt;/ul&gt;<br>&lt;/div&gt;</pre>
+			</div>
+		</div>
+		<!--/菜单-->
+
+	</div>
+</div>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+	$(function(){
+		$(".module h2 button").on("click",function(){
+			if($(this).hasClass("hidebtn")){
+				$(this).html("收起").removeClass("hidebtn eui-btn-danger").parent("h2").siblings(".item").show();
+			}else{
+				$(this).html("展开").addClass("hidebtn eui-btn-danger").parent("h2").siblings(".item").hide();
+			}
+		});
+	})
+</script>
 </body>
 </html>

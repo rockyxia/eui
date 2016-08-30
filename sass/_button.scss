@@ -1,13 +1,11 @@
 /**********************
-Date:2016-05-31
-BuilderVersion:EUI-button v0.1.0
+upDate:2016-07-13
+BuilderVersion:EUI-button v0.1.1
 CopyRight:jhxia & iflytek_EUED
 ***********************/
 /* base btn */
 .eui-btn {
 	display: inline-block;
-	*display: inline;
-	zoom: 1;
 	vertical-align: middle;
 	line-height: normal;
 	white-space: nowrap;
@@ -54,7 +52,7 @@ CopyRight:jhxia & iflytek_EUED
 .eui-btn-active,
 .eui-btn:active {
 	box-shadow: 0 0 0 1px rgba(0,0,0, 0.10) inset, 0 0 6px rgba(0,0,0, 0.05) inset;
-	border-color: #000\9;
+	/*border-color: #333#{$hack_ie8};*/
 }
 .eui-btn[disabled],
 .eui-btn-disabled,
@@ -62,6 +60,7 @@ CopyRight:jhxia & iflytek_EUED
 .eui-btn-disabled:focus,
 .eui-btn-disabled:active {
 	border: none;
+	background-color:#e6e6e6;
 	background-image: none;
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 	filter: alpha(opacity=40);

@@ -1,0 +1,352 @@
+@charset "UTF-8";
+/**********************
+Date:2016-12-02
+BuilderVersion:EUI-form-beautify v0.1.1
+CopyRight:jhxia & iflytek_EUED
+***********************/
+.eui-checkbox,
+.eui-radio {
+  line-height: 1.875rem;
+  min-width: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.eui-checkbox input[type="checkbox"],
+.eui-radio input[type="checkbox"],
+.eui-checkbox input[type="radio"],
+.eui-radio input[type="radio"] {
+  position: absolute;
+  visibility: hidden;
+  width: 0.0625rem;
+  height: 0.0625rem;
+}
+
+.eui-checkbox .eui-caption,
+.eui-radio .eui-caption {
+  margin: 0 .125rem;
+  vertical-align: middle;
+}
+
+.eui-checkbox .eui-check,
+.eui-radio .eui-check {
+  width: 1em;
+  height: 1em;
+  background-color: #ffffff;
+  border: 1px #999 solid;
+  padding: 0;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.eui-checkbox .eui-check:before,
+.eui-radio .eui-check:before {
+  position: absolute;
+  vertical-align: middle;
+  content: "";
+  background-color: transparent;
+  left: 50%;
+  top: 50%;
+  margin-left: -0.35em;
+  margin-top: -0.95em;
+  display: block;
+  transition: all 0.2s linear;
+}
+
+.eui-checkbox input[type="checkbox"]:checked ~ .eui-check:before,
+.eui-radio input[type="checkbox"]:checked ~ .eui-check:before {
+  content: "\2713";
+  transition: all 0.2s linear;
+}
+
+.eui-checkbox input[type="checkbox"]:disabled ~ .eui-caption,
+.eui-radio input[type="checkbox"]:disabled ~ .eui-caption,
+.eui-checkbox input[type="radio"]:disabled ~ .eui-caption,
+.eui-radio input[type="radio"]:disabled ~ .eui-caption {
+  color: #cacaca;
+  cursor: default;
+}
+
+.eui-checkbox input[type="checkbox"]:disabled ~ .eui-check,
+.eui-radio input[type="checkbox"]:disabled ~ .eui-check,
+.eui-checkbox input[type="radio"]:disabled ~ .eui-check,
+.eui-radio input[type="radio"]:disabled ~ .eui-check {
+  border-color: #cacaca;
+  cursor: default;
+}
+
+.eui-checkbox input[data-show="indeterminate"] ~ .eui-check:before,
+.eui-radio input[data-show="indeterminate"] ~ .eui-check:before,
+.eui-checkbox input[data-show="indeterminate"]:checked ~ .eui-check:before,
+.eui-radio input[data-show="indeterminate"]:checked ~ .eui-check:before,
+.eui-checkbox input.indeterminate:checked ~ .eui-check:before,
+.eui-radio input.indeterminate:checked ~ .eui-check:before,
+.eui-checkbox input[type="checkbox"]:indeterminate ~ .eui-check:before,
+.eui-radio input[type="checkbox"]:indeterminate ~ .eui-check:before {
+  display: none;
+}
+
+.eui-checkbox input[data-show="indeterminate"] ~ .eui-check:after,
+.eui-radio input[data-show="indeterminate"] ~ .eui-check:after,
+.eui-checkbox input[data-show="indeterminate"]:checked ~ .eui-check:after,
+.eui-radio input[data-show="indeterminate"]:checked ~ .eui-check:after,
+.eui-checkbox input.indeterminate:checked ~ .eui-check:after,
+.eui-radio input.indeterminate:checked ~ .eui-check:after,
+.eui-checkbox input[type="checkbox"]:indeterminate ~ .eui-check:after,
+.eui-radio input[type="checkbox"]:indeterminate ~ .eui-check:after {
+  position: absolute;
+  display: block;
+  content: "";
+  background-color: #1d1d1d;
+  height: .875rem;
+  width: .875rem;
+  left: 50%;
+  top: 50%;
+  margin-left: -0.4375rem;
+  margin-top: -0.4375rem;
+}
+
+.eui-checkbox input[data-show="indeterminate"]:not(:checked) ~ .eui-check:after,
+.eui-radio input[data-show="indeterminate"]:not(:checked) ~ .eui-check:after {
+  background-color: transparent;
+}
+
+.eui-checkbox input[data-show="indeterminate"]:disabled ~ .eui-check:after,
+.eui-radio input[data-show="indeterminate"]:disabled ~ .eui-check:after {
+  background-color: #cacaca;
+}
+
+.eui-radio .eui-check {
+  border: 1px #999999 solid;
+  border-radius: 50%;
+}
+
+.eui-radio .eui-check:before {
+  position: absolute;
+  display: block;
+  content: "";
+  background-color: #1d1d1d;
+  height: .5624rem;
+  width: .5624rem;
+  left: 50%;
+  top: 50%;
+  margin-left: -0.298rem;
+  margin-top: -0.298rem;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  border-radius: 50%;
+}
+
+.eui-radio input[type="radio"]:checked ~ .eui-check:before {
+  border-color: transparent;
+}
+
+.eui-radio input[type="radio"]:not(:checked) ~ .eui-check:before {
+  background-color: transparent;
+}
+
+.eui-radio input[type="radio"]:disabled ~ .eui-check:before {
+  border-color: transparent;
+}
+
+/*--select美化--*/
+.eui-select-box {
+  white-space: nowrap;
+  display: inline-block;
+}
+.eui-select-box * {
+  display: block;
+}
+.eui-select-box a {
+  color: #666;
+  outline-width: 0px;
+  text-decoration: none;
+}
+.eui-select-box .selectBox {
+  float: left;
+  cursor: pointer;
+  border: solid 1px #cfcfcf;
+  background: #fff;
+  overflow: hidden;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.eui-select-box .selectLt {
+  cursor: pointer;
+  text-align: left;
+  overflow: hidden;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.eui-select-box .sHover .selectLt {
+  color: #555;
+}
+.eui-select-box .sHover .selectRt {
+  background: #f1f3f6;
+}
+.eui-select-box .sHover .selectRt:after {
+  border-top-color: #807F7F;
+}
+.eui-select-box .selectRt {
+  position: relative;
+  height: 28px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 28px;
+  margin-top: 0;
+  cursor: pointer;
+  background: #f1f3f6;
+  float: right;
+}
+.eui-select-box .selectRt:after {
+  position: absolute;
+  top: 11px;
+  left: 8px;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 7px solid #ADADAD;
+}
+.eui-select-box .sPressDown {
+  border-color: #51A3FF;
+  background: #fff;
+}
+.eui-select-box .sPressDown .selectRt {
+  background: none;
+}
+.eui-select-box .optionsBox {
+  position: absolute;
+  padding: 0;
+  margin: 0px;
+  background: #fff;
+  z-index: 100;
+  border: solid 1px #88AEF4;
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+}
+.eui-select-box .optionBox {
+  cursor: pointer;
+  padding: 2px 20px 2px 12px;
+  margin: 0px;
+  height: 25px;
+  line-height: 25px;
+}
+.eui-select-box .optionBox span {
+  cursor: pointer;
+  font-size: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.eui-select-box .oHover {
+  background: #fefefe;
+  color: #385db4;
+}
+.eui-select-box .oNormal {
+  color: #333;
+}
+.eui-select-box .selected {
+  background: #f1f3f6;
+}
+
+/*--file美化--*/
+.eui-file {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  background: #f1f3f6;
+  border: 1px solid #cfcfcf;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  padding: 0.3em 1em;
+  overflow: hidden;
+  color: #807f7f;
+  text-decoration: none;
+  text-indent: 0;
+  line-height: 26px;
+}
+.eui-file input[type=file] {
+  position: absolute;
+  font-size: 100px;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  cursor: pointer;
+}
+.eui-file input[type=text] {
+  border: 0;
+  font-size: 14px;
+  padding: 0.2em 0.3em;
+  color: #777;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.eui-file:hover {
+  background: #f1f3f6;
+  border-color: #807f7f;
+  color: #807f7f;
+  text-decoration: none;
+}
+
+.eui-file-btn {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  padding: 0;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  cursor: default;
+}
+.eui-file-btn input[type=file] {
+  position: absolute;
+  font-size: 100px;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  cursor: pointer;
+}
+.eui-file-btn input[type=text] {
+  float: left;
+  display: inline-block;
+  outline: 0 none;
+  padding: 0.3em;
+  overflow: hidden;
+  cursor: default;
+  border: 1px solid #ccc;
+  border-right: 0;
+  color: #777;
+  line-height: 26px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.eui-file-btn input[type=button] {
+  float: left;
+  display: inline-block;
+  outline: 0 none;
+  padding: 0.3em;
+  margin: 0;
+  color: #807f7f;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  line-height: 24px;
+}
+.eui-file-btn:hover input[type=text], .eui-file-btn:hover input[type=button] {
+  border-color: #807f7f;
+}

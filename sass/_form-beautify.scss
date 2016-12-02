@@ -1,6 +1,6 @@
 /**********************
-Date:2016-08-30
-BuilderVersion:EUI-form-beautify v0.1.0
+Date:2016-12-02
+BuilderVersion:EUI-form-beautify v0.1.1
 CopyRight:jhxia & iflytek_EUED
 ***********************/
 
@@ -161,4 +161,238 @@ CopyRight:jhxia & iflytek_EUED
 }
 .eui-radio input[type="radio"]:disabled ~ .eui-check:before {
 	border-color: transparent;
+}
+
+/*--select美化--*/
+.eui-select-box {
+	white-space: nowrap;
+	display: inline-block;
+
+	* {
+		display: block;
+	}
+
+	a {
+		color: #666;
+		outline-width: 0px;
+		text-decoration: none;
+	}
+
+	.selectBox {
+		float: left;
+		cursor: pointer;
+		border: solid 1px #cfcfcf;
+		background:#fff;
+		overflow: hidden;
+		-webkit-border-radius: 2px;
+		   -moz-border-radius: 2px;
+				border-radius: 2px;
+	}
+
+	.selectLt {
+		cursor: pointer;
+		text-align: left;
+		overflow: hidden;
+		height: 28px;
+		line-height: 28px;
+		padding: 0 10px;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	.sHover {
+		.selectLt {
+			color: #555;
+		}
+		.selectRt {
+			background:#f1f3f6;
+
+			&:after {
+				border-top-color: #807F7F;
+			}
+		}
+	}
+
+	.selectRt {
+		position: relative;
+		height: 28px;
+		padding-bottom: 0px;
+		padding-top: 0px;
+		padding-left: 0px;
+		padding-right: 28px;
+		margin-top:0;
+		cursor: pointer;
+		background:#f1f3f6;
+		float: right;
+
+		&:after {
+			position:absolute;
+			top:11px;
+			left: 8px;
+			content:"";
+			width: 0;
+			height: 0;
+			border-left: 6px solid transparent;
+			border-right: 6px solid transparent;
+			border-top: 7px solid #ADADAD;
+		}
+	}
+
+	.sNormal {
+	}
+	.sHover {
+	}
+
+	.sPressDown {
+		border-color:#51A3FF;
+		background: #fff;
+
+		.selectRt {
+			background:none;
+		}
+	}
+
+	.optionsBox {
+		position: absolute;
+		padding: 0;
+		margin: 0px;
+		background: #fff;
+		z-index: 100;
+		border: solid 1px #88AEF4;
+		//border-top:0;
+		-webkit-border-radius: 0 0 4px 4px;
+		   -moz-border-radius: 0 0 4px 4px;
+				border-radius: 0 0 4px 4px;
+	}
+
+	.optionsInnerBox {
+	}
+
+	.optionBox {
+		cursor: pointer;
+		padding: 2px 20px 2px 12px;
+		margin: 0px;
+		height: 25px;
+		line-height: 25px;
+
+		span {
+			cursor: pointer;
+			font-size: 12px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+	}
+
+	.oHover {
+		background: #fefefe;
+		color: #385db4;
+	}
+
+	.oNormal {
+		color: #333;
+	}
+
+	.selected {
+		background: #f1f3f6;
+	}
+}
+
+/*--file美化--*/
+.eui-file {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	background: #f1f3f6;
+	border: 1px solid #cfcfcf;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	padding: 0.3em 1em;
+	overflow: hidden;
+	color: #807f7f;
+	text-decoration: none;
+	text-indent: 0;
+	line-height: 26px;
+
+	input[type=file] {
+		position: absolute;
+		font-size: 100px;
+		right: 0;
+		top: 0;
+		opacity: 0;
+		filter: alpha(opacity=0);
+		cursor: pointer;
+	}
+	input[type=text] {
+		border: 0;
+		font-size:14px;
+		padding:0.2em 0.3em;
+		color:#777;
+		overflow:hidden;
+
+		text-overflow:ellipsis;
+		white-space:nowrap;
+	}
+
+	&:hover {
+		background: #f1f3f6;
+		border-color: #807f7f;
+		color: #807f7f;
+		text-decoration: none;
+	}
+}
+.eui-file-btn {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	overflow: hidden;
+	padding: 0;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	cursor: default;
+
+	input[type=file] {
+		position: absolute;
+		font-size: 100px;
+		right: 0;
+		top: 0;
+		opacity: 0;
+		filter: alpha(opacity=0);
+		cursor: pointer;
+	}
+	input[type=text] {
+		float:left;
+		display:inline-block;
+		outline:0 none;
+		
+		padding: 0.3em;
+		overflow:hidden;
+		cursor:default;
+		border:1px solid #ccc;
+		border-right:0;
+		color:#777;
+		line-height: 26px;
+		
+		text-overflow:ellipsis;
+		white-space:nowrap;
+		
+	}
+	input[type=button] {
+		float:left;
+		display:inline-block;
+		outline:0 none;
+		padding: 0.3em;
+		margin:0;
+		color: #807f7f;
+		cursor:pointer;
+		border:1px solid #ccc;
+		line-height: 24px;
+	}
+	&:hover {
+		input[type=text],input[type=button] {
+			border-color: #807f7f;
+		}
+	}
 }

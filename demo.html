@@ -24,13 +24,18 @@
 					<a href="#form">表单</a>
 				</li>
 				<li>
-					<a href="#formbeautify">表单美化</a>
-				</li>
-				<li>
 					<a href="#table">表格</a>
 				</li>
 				<li>
 					<a href="#menu">菜单</a>
+				</li>
+
+
+				<li class="menu-item-divided ">
+					<a href="#formbeautify">表单美化</a>
+				</li>
+				<li>
+					<a href="#layout">常用布局</a>
 				</li>
 				
 				<li class="menu-item-divided ">
@@ -45,7 +50,7 @@
 	<div class="main">
 		<div class="header">
 			<h1><span>EUI</span>.CSS</h1>
-			<small>常用基础、扩展性高的CSS模块库<sup style="color:#1f8dd6;">V0.1.1</sup></small>
+			<small>常用基础、扩展性高的CSS模块库<sup style="color:#1f8dd6;">V0.1.2</sup></small>
 		</div>
 
 		<!--如何开始-->
@@ -57,7 +62,7 @@
 				<p>在你自己项目的样式表之前使用<code>&lt;link&gt;</code>引入EUI到你页面的<code>&lt;head&gt;</code>中。</p>
 				<pre>&lt;link rel="stylesheet" href="../css/eui-min.css"&gt;</pre>
 				<p>EUI引用路径修改成你自己的。</p>
-				<p><a href="https://github.com/rockyxia/eui" target="_blank" title="从Githup上下载EUI" class="content-link">从Githup上下载EUI</a></p>
+				<p><a href="https://github.com/rockyxia/eui" target="_blank" title="从Github上下载EUI" class="content-link">从Github上下载EUI</a></p>
 				<p>EUI是基于<a href="https://github.com/rockyxia/base" title="浏览器效果统一基础样式" target="_blank" class="content-link">base.css</a>添加了HTML元素的布局和样式，以及常用的UI组件。EUI提供最基础的样式，具有很高的扩展性，鼓励你基于此写出自己的样式。</p>
 			</div>
 		</div>
@@ -250,61 +255,6 @@
 			</div>
 		</div>
 		<!--/表单-->
-
-		<!--表单美化-->
-		<a name="formbeautify"></a>
-		<div class="module">
-			<h2><button class="eui-btn btn-xs eui-btn-success fr">收起</button>表单美化<small>简单的CSS表单美化样式</small></h2>
-			<div class="item">
-				<h3>Checkbox</h3>
-				<p>使用class <code>eui-checkbox</code> 包裹 <code>chechbox</code> 与样式操作区域 <code>eui-check</code> (默认为字符 <code>\2713</code> ) 和文字说明区域 <code>eui-caption</code> (非必须)</p>
-				<div>
-					<label class="eui-checkbox">
-						<input type="checkbox" checked>
-						<span class="eui-check"></span>
-						<span class="eui-caption">多选框</span>
-					</label>
-					<label class="eui-checkbox">
-						<input type="checkbox" disabled checked>
-						<span class="eui-check"></span>
-						<span class="eui-caption">多选框</span>
-					</label>
-					<label class="eui-checkbox">
-						<input type="checkbox" disabled>
-						<span class="eui-check"></span>
-						<span class="eui-caption">多选框</span>
-					</label>
-				</div>
-				<pre>&lt;label class="<span>eui-checkbox</span>"&gt;<br>  &lt;input type="<span>checkbox</span>" <span>checked</span>&gt;<br>  &lt;span class="<span>eui-check</span>"&gt;&lt;/span&gt;<br>  &lt;span class="<span>eui-caption</span>"&gt;多选框&lt;/span&gt;<br>&lt;/label&gt;<br>&lt;label class="<span>eui-checkbox</span>"&gt;<br>  &lt;input type="<span>checkbox</span>" <span>disabled checked</span>&gt;<br>  &lt;span class="<span>eui-check</span>"&gt;&lt;/span&gt;<br>  &lt;span class="<span>eui-caption</span>"&gt;多选框&lt;/span&gt;<br>&lt;/label&gt;<br>&lt;label class="<span>eui-checkbox</span>"&gt;<br>  &lt;input type="<span>checkbox</span>" <span>disabled</span>&gt;<br>  &lt;span class="<span>eui-check</span>"&gt;&lt;/span&gt;<br>  &lt;span class="<span>eui-caption</span>"&gt;多选框&lt;/span&gt;<br>&lt;/label&gt;</pre>
-			</div>
-			<div class="item">
-				<h3>Radio</h3>
-				<p>使用class <code>eui-radio</code> 包裹 <code>radio</code> 与样式操作区域 <code>eui-check</code> (默认为 <code>#1d1d1d</code> 纯色圆点，ie9+支持) 和文字说明区域 <code>eui-caption</code> (非必须)</p>
-				<div>
-					<label class="eui-radio">
-						<input type="radio" name="test-radio" checked>
-						<span class="eui-check"></span>
-						<span class="eui-caption">单选框</span>
-					</label>
-					<label class="eui-radio">
-						<input type="radio" name="test-radio">
-						<span class="eui-check"></span>
-						<span class="eui-caption">单选框</span>
-					</label>
-					<label class="eui-radio">
-						<input type="radio" name="test-radio" disabled>
-						<span class="eui-check"></span>
-						<span class="eui-caption">单选框</span>
-					</label>
-				</div>
-				<pre>&lt;label class="<span>eui-radio</span>"&gt;<br>  &lt;input type="<span>radio</span>" name="test-radio" <span>checked</span>&gt;<br>  &lt;span class="<span>eui-check</span>"&gt;&lt;/span&gt;<br>  &lt;span class="<span>eui-caption</span>"&gt;单选框&lt;/span&gt;<br>&lt;/label&gt;<br>&lt;label class="<span>eui-radio</span>"&gt;<br>  &lt;input type="<span>radio</span>" name="test-radio"&gt;<br>  &lt;span class="<span>eui-check</span>"&gt;&lt;/span&gt;<br>  &lt;span class="<span>eui-caption</span>"&gt;单选框&lt;/span&gt;<br>&lt;/label&gt;<br>&lt;label class="<span>eui-radio</span>"&gt;<br>  &lt;input type="<span>radio</span>" name="test-radio" <span>disabled</span>&gt;<br>  &lt;span class="<span>eui-check</span>"&gt;&lt;/span&gt;<br>  &lt;span class="<span>eui-caption</span>"&gt;单选框&lt;/span&gt;<br>&lt;/label&gt;</pre>
-			</div>
-			<div class="item">
-				<h3>Select</h3>
-				<p>暂无</p>
-			</div>
-		</div>
-		<!--/表单美化-->
 
 		<!--表格-->
 		<a name="table"></a>
@@ -603,9 +553,133 @@
 		</div>
 		<!--/菜单-->
 
+
+		<!--表单美化-->
+		<a name="formbeautify"></a>
+		<div class="module">
+			<h2><button class="eui-btn btn-xs eui-btn-success fr">收起</button>表单美化<small>简单的CSS表单美化样式</small></h2>
+			<div class="item">
+				<h3>Checkbox</h3>
+				<p>使用class <code>eui-checkbox</code> 包裹 <code>chechbox</code> 与样式操作区域 <code>eui-check</code> (默认为字符 <code>\2713</code> ) 和文字说明区域 <code>eui-caption</code> (非必须)</p>
+				<div>
+					<label class="eui-checkbox">
+						<input type="checkbox" checked>
+						<span class="eui-check"></span>
+						<span class="eui-caption">多选框</span>
+					</label>
+					<label class="eui-checkbox">
+						<input type="checkbox" disabled checked>
+						<span class="eui-check"></span>
+						<span class="eui-caption">多选框</span>
+					</label>
+					<label class="eui-checkbox">
+						<input type="checkbox" disabled>
+						<span class="eui-check"></span>
+						<span class="eui-caption">多选框</span>
+					</label>
+				</div>
+				<pre>&lt;label class="<span>eui-checkbox</span>"&gt;<br>  &lt;input type="<span>checkbox</span>" <span>checked</span>&gt;<br>  &lt;span class="<span>eui-check</span>"&gt;&lt;/span&gt;<br>  &lt;span class="<span>eui-caption</span>"&gt;多选框&lt;/span&gt;<br>&lt;/label&gt;<br>&lt;label class="<span>eui-checkbox</span>"&gt;<br>  &lt;input type="<span>checkbox</span>" <span>disabled checked</span>&gt;<br>  &lt;span class="<span>eui-check</span>"&gt;&lt;/span&gt;<br>  &lt;span class="<span>eui-caption</span>"&gt;多选框&lt;/span&gt;<br>&lt;/label&gt;<br>&lt;label class="<span>eui-checkbox</span>"&gt;<br>  &lt;input type="<span>checkbox</span>" <span>disabled</span>&gt;<br>  &lt;span class="<span>eui-check</span>"&gt;&lt;/span&gt;<br>  &lt;span class="<span>eui-caption</span>"&gt;多选框&lt;/span&gt;<br>&lt;/label&gt;</pre>
+			</div>
+			<div class="item">
+				<h3>Radio</h3>
+				<p>使用class <code>eui-radio</code> 包裹 <code>radio</code> 与样式操作区域 <code>eui-check</code> (默认为 <code>#1d1d1d</code> 纯色圆点，ie9+支持) 和文字说明区域 <code>eui-caption</code> (非必须)</p>
+				<div>
+					<label class="eui-radio">
+						<input type="radio" name="test-radio" checked>
+						<span class="eui-check"></span>
+						<span class="eui-caption">单选框</span>
+					</label>
+					<label class="eui-radio">
+						<input type="radio" name="test-radio">
+						<span class="eui-check"></span>
+						<span class="eui-caption">单选框</span>
+					</label>
+					<label class="eui-radio">
+						<input type="radio" name="test-radio" disabled>
+						<span class="eui-check"></span>
+						<span class="eui-caption">单选框</span>
+					</label>
+				</div>
+				<pre>&lt;label class="<span>eui-radio</span>"&gt;<br>  &lt;input type="<span>radio</span>" name="test-radio" <span>checked</span>&gt;<br>  &lt;span class="<span>eui-check</span>"&gt;&lt;/span&gt;<br>  &lt;span class="<span>eui-caption</span>"&gt;单选框&lt;/span&gt;<br>&lt;/label&gt;<br>&lt;label class="<span>eui-radio</span>"&gt;<br>  &lt;input type="<span>radio</span>" name="test-radio"&gt;<br>  &lt;span class="<span>eui-check</span>"&gt;&lt;/span&gt;<br>  &lt;span class="<span>eui-caption</span>"&gt;单选框&lt;/span&gt;<br>&lt;/label&gt;<br>&lt;label class="<span>eui-radio</span>"&gt;<br>  &lt;input type="<span>radio</span>" name="test-radio" <span>disabled</span>&gt;<br>  &lt;span class="<span>eui-check</span>"&gt;&lt;/span&gt;<br>  &lt;span class="<span>eui-caption</span>"&gt;单选框&lt;/span&gt;<br>&lt;/label&gt;</pre>
+			</div>
+			<div class="item">
+				<h3>Select</h3>
+				<p>目前纯css方法美化Select控件并无什么好的方法，我们借助javascript来实现，使用一个Jquery插件。</p>
+				<p>使用方法：</p>
+				<ol>
+					<li>在页面中引入Jquery及jquery.selectbeautify两个JS文件；</li>
+					<li>给正常的select增加class <code>eui-select</code> 即可。</li>
+				</ol>
+				<div class="clearfix">
+					<select class="eui-select" name="select1">
+						<option>Select控件</option>
+						<option>正常文字下拉</option>
+						<option>文字超长菜单的菜单如何显示</option>
+						<option>option子项1</option>
+						<option>option子项2</option>
+					</select>
+					<select class="eui-select" style="width: 120px;" name="select2">
+						<option>Select控件</option>
+						<option>正常文字下拉</option>
+						<option>文字超长菜单的菜单如何显示</option>
+						<option>option子项1</option>
+						<option>option子项2</option>
+					</select>
+				</div>
+				<pre>&lt;select class="<span>eui-select</span>" name="select1"&gt;<br>  &lt;option&gt;Select控件&lt;/option&gt;<br>  &lt;option&gt;正常文字下拉&lt;/option&gt;<br>  &lt;option&gt;文字超长菜单的菜单如何显示&lt;/option&gt;<br>  &lt;option&gt;option子项1&lt;/option&gt;<br>  &lt;option&gt;option子项2&lt;/option&gt;<br>&lt;/select&gt;<br><br>&lt;select class="<span>eui-select</span>" <span>style="width: 120px;"</span> name="select2"&gt;<br>  &lt;option&gt;Select控件&lt;/option&gt;<br>  &lt;option&gt;正常文字下拉&lt;/option&gt;<br>  &lt;option&gt;文字超长菜单的菜单如何显示&lt;/option&gt;<br>  &lt;option&gt;option子项1&lt;/option&gt;<br>  &lt;option&gt;option子项2&lt;/option&gt;<br>&lt;/select&gt;<br><br>&lt;script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"&gt;&lt;/script&gt;<br>&lt;script type="text/javascript" src="js/jquery.selectbeautify.js"&gt;&lt;/script&gt;</pre>
+				<p><strong>备注：</strong>页面中出现多个select控件的时候，必须为每个select设置<code>name</code>或<code>id</code>。</p>
+			</div>
+			<div class="item">
+				<h3>Input[type=file]</h3>
+				<p>上传控件默认的样式在不同的浏览器下表现不尽相同，可以通过css来统一显示效果。</p>
+				<p>EUI提供三种美化效果：</p>
+				<ol>
+					<li>单按钮</li>
+					<li>文本框加文字</li>
+					<li>文本框加按钮</li>
+				</ol>
+				<p>
+					<a href="javascript:;" class="eui-file">选择文件<input type="file"></a>
+
+					<span class="eui-file">
+						<input type="text" readonly id="viewfile" placeholder="请选择文件...">
+						<label>选择文件</label>
+						<input type="file" onchange="document.getElementById('viewfile').value=this.value;">
+					</span>
+
+					<span class="eui-file-btn">
+						<input type="text" readonly id="viewfile1" placeholder="请选择文件...">
+						<input type="button" value="上传">
+						<input type="file" onchange="document.getElementById('viewfile1').value=this.value;">
+					</span>
+				</p>
+				<pre>&lt;a href="javascript:;" class="<span>eui-file</span>"&gt;选择文件&lt;input type="file"&gt;&lt;/a&gt;<br><br>&lt;span class="<span>eui-file</span>"&gt;<br>  &lt;input type="text" readonly <span>id="viewfile"</span> placeholder="请选择文件..."&gt;<br>  &lt;label&gt;选择文件&lt;/label&gt;<br>  &lt;input type="file" onchange="document.getElementById('<span>viewfile</span>').value=this.value;"&gt;<br>&lt;/span&gt;<br><br>&lt;span class="<span>eui-file-btn</span>"&gt;<br>  &lt;input type="text" readonly <span>id="viewfile1"</span> placeholder="请选择文件..."&gt;<br>  &lt;input type="button" value="上传"&gt;<br>  &lt;input type="file" onchange="document.getElementById('<span>viewfile1</span>').value=this.value;"&gt;<br>&lt;/span&gt;</pre>
+			</div>
+			<div class="item">
+				<h3>单独使用</h3>
+				<p>EUI的每个模块都可以单独出来独立使用，按钮、表单、表格、菜单四大基础模块不提供单独的下载，有需要的可以自行下载SASS源码进行生成。表单美化模块提供了单独使用的CSS。</p>
+				<ol>
+					<li>未压缩版：<code>eui-form-beautify.css</code>，Github地址：<a href="https://github.com/rockyxia/eui/blob/master/css/eui-form-beautify.css" title="eui-form-beautify.css" target="_blank" class="content-link">eui-form-beautify.css</a></li>
+					<li>压缩版：<code>eui-form-beautify-min.css</code>，Github地址：<a href="https://github.com/rockyxia/eui/blob/master/css/eui-form-beautify-min.css" title="eui-form-beautify-min.css" target="_blank" class="content-link">eui-form-beautify-min.css</a></li>
+				</ol>
+			</div>
+		</div>
+		<!--/表单美化-->
+
+		<!--常用布局-->
+		<a name="layout"></a>
+		<div class="module">
+			<h2><button class="eui-btn btn-xs eui-btn-success fr">收起</button>常用布局<small>常用的一些布局及模块</small></h2>
+			<div class="item">
+				<p>暂无</p>
+			</div>
+		</div>
+		<!--/常用布局-->
+
 	</div>
 </div>
 <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.selectbeautify.js"></script>
 <script>
 	$(function(){
 		$(".module h2 button").on("click",function(){

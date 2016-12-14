@@ -360,7 +360,7 @@ CopyRight:jhxia & iflytek_EUED
 }
 
 /**********************
-Date:2016-12-14
+Date:2016-12-15
 BuilderVersion:EUI-form v0.1.2
 CopyRight:jhxia & iflytek_EUED
 ***********************/
@@ -521,7 +521,8 @@ CopyRight:jhxia & iflytek_EUED
   margin: 1.5em 0 0 11em;
 }
 
-.eui-form .eui-input-rounded {
+.eui-form .eui-input-rounded,
+.eui-form input.eui-input-rounded {
   border-radius: 2em;
 }
 

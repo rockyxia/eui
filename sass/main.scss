@@ -8,8 +8,21 @@ body {
 	color: #777;
 }
 a {
-	color:#1F8DD6;
-	text-decoration:none;
+	color:$color-hover;
+	&:hover {
+		color: darken($color-hover,10%);
+		text-decoration: underline;
+	}
+}
+.tr {
+	text-align: right;
+}
+.ml5 {
+	margin-left: 5px;
+}
+.icon {
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .layout {
@@ -34,6 +47,9 @@ a {
 	color: #999;
 	padding: 0.625em 1em;
 	white-space: normal;
+}
+.sidebar a:hover {
+	text-decoration: none;
 }
 .sidebar .eui-menu li a:hover,
 .sidebar .eui-menu li a:focus {
@@ -82,6 +98,25 @@ ol {
 	list-style:decimal;
 	margin:.8em 0;
 }
+fieldset {
+	padding: 10px;
+	margin-bottom: 10px;
+	border:1px solid #eee;
+	border-radius: 3px;
+	font-size: 12px;
+
+	legend {
+		font-size: 16px;
+	}
+}
+
+.resize-box {
+	overflow: auto;
+	resize:both;
+	background-color: #eee;
+	padding: 10px;
+}
+
 
 /*--header--*/
 .header {
@@ -127,4 +162,230 @@ ol {
 .content-link {
 	padding-right:25px;
 	background: transparent url(../images/link-icon.png) no-repeat right center;
+}
+
+.txtlist {
+	line-height: 28px;
+
+	.icon-textlist {
+		min-width: 4px;
+		height: 14px;
+		padding: 0 5px;
+		line-height: 14px;
+		margin: 0 5px;
+		background-color: #aaa;
+		color: #f00;
+	}
+
+	.intro {
+		padding: 0 25px 10px;
+		line-height: 20px;
+		p {
+			margin:0;
+		}
+	}
+}
+
+.piclist {
+
+}
+.picitem {
+	float: left;
+	margin:10px;
+
+	.img {
+		position: relative;
+		width: 150px;
+		height: 150px;
+		background-color: #fff;
+		text-align: center;
+		line-height: 150px;
+		span {
+			position: absolute;
+			left: 0;
+			right: 0;
+			width: 50px;
+			height: 20px;
+			text-align: center;
+			line-height: 20px;
+			background-color: #aaa;
+			color: #f00;
+		}
+	}
+	.txt {
+		line-height: 30px;
+		text-align: center;
+	}
+}
+.pictxtlist {}
+.pictxtitem {
+	border-top: 1px dashed #ddd;
+	padding-top: 10px;
+	margin-top: 10px;
+
+	&:first-child {
+		border-top:0;
+		padding-top: 0;
+		margin-top: 0;
+	}
+	.img {
+		float: left;
+		width: 150px;
+		height: 150px;
+		background-color: #fff;
+		text-align: center;
+		line-height: 150px;
+	}
+	.txt {
+		margin-left: 160px;
+		line-height: 30px;
+
+		.title {
+			font-size:16px;
+		}
+
+		p {
+			line-height: 22px;
+		}
+	}
+}
+.pictxtitem-big {
+	.img {
+		width: 300px;
+		height: 200px;
+		line-height: 200px;
+	}
+	.txt {
+		margin-left: 310px;
+	}
+}
+
+.logindemo {
+	float: left;
+	padding: 10px;
+	background-color: #eee;
+
+	.eui-control-group {
+		position: relative;
+		padding:5px 10px;
+		background-color: #fff;
+		border:1px solid #999;
+		border-radius:2px;
+
+		&:hover {
+			border:1px solid #007EE0;
+		}
+
+		input {
+			border: 0;
+			width: 200px;
+		}
+
+		.eui-aligned-label {
+			width: 20px;
+			height: 20px;
+			margin-right: 5px;
+			background-color: #eee;
+		}
+	}
+
+	.tips-error {
+		position: absolute;
+		right: -15px;
+		top: -20px;
+		padding: 5px 10px;
+		white-space:nowrap;
+		background-color: #fff;
+		border:1px solid #F49A8C;
+		color: #e9573f;
+
+		border-radius:4px;
+
+		.arrow-down {
+			border-color: #f49a8c transparent transparent;
+			border-style: solid;
+			border-width: 6px 5px 0;
+			bottom: -6px;
+			font-size: 0;
+			height: 0;
+			left: 7px;
+			line-height: 0;
+			position: absolute;
+			width: 0;
+
+			em {
+				border-color: white transparent transparent;
+				border-style: solid;
+				border-width: 6px 5px 0;
+				bottom: 1px;
+				font-size: 0;
+				height: 0;
+				left: -5px;
+				line-height: 0;
+				position: absolute;
+				width: 0;
+			}
+		}
+	}
+
+	.eui-controls {
+		margin-top: 5px;
+		margin-left: 0;
+
+		.eui-btn {
+			width: 100%;
+		}
+	}
+}
+
+.regdemo {
+	float: left;
+	width: 450px;
+	padding: 10px;
+	background-color: #eee;
+
+	.eui-control-group {
+		label {
+			margin-right: 5px;
+			em {
+				padding-right: 5px;
+				color: #f00;
+			}
+		}
+
+		input[type="text"],
+		input[type="password"] {
+			width: 200px;
+		}
+		input.vericode {
+			width: 105px;
+		}
+		.picdemo {
+			display: inline-block;
+			vertical-align: middle;
+			width: 85px;
+			height: 27px;
+			background-color: #F3FBFE;
+			text-align: center;
+			line-height: 27px;
+			color: #335E50;
+		}
+		.send-code {
+			background: #f5ffe9;
+			border: 1px solid #7aa646;
+			border-radius: 3px;
+			color: #7aa646;
+		}
+		.eui-select-box {
+			margin-left: -3px;
+		}
+	}
+
+	.eui-controls {
+		margin-top: 5px;
+
+	}
+	.tip_info {
+		color: #aaa;
+	}
 }

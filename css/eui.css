@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /**********************
-upDate:2016-12-02
-BuilderVersion:EUI.CSS v0.1.2
+upDate:2016-12-14
+BuilderVersion:EUI.CSS v0.2.0
 CopyRight:jhxia & iflytek_EUED
 ***********************/
 /**********************
@@ -360,8 +360,8 @@ CopyRight:jhxia & iflytek_EUED
 }
 
 /**********************
-Date:2016-07-15
-BuilderVersion:EUI-form v0.1.1
+Date:2016-12-14
+BuilderVersion:EUI-form v0.1.2
 CopyRight:jhxia & iflytek_EUED
 ***********************/
 /* base form */
@@ -509,7 +509,7 @@ CopyRight:jhxia & iflytek_EUED
   margin-bottom: 0.5em;
 }
 
-.eui-form-aligned .eui-control-group label {
+.eui-form-aligned .eui-control-group .eui-aligned-label {
   text-align: right;
   display: inline-block;
   vertical-align: middle;
@@ -726,8 +726,8 @@ CopyRight:jhxia & iflytek_EUED
 }
 
 /**********************
-Date:2016-12-02
-BuilderVersion:EUI-form-beautify v0.1.1
+Date:2016-12-14
+BuilderVersion:EUI-form-beautify v0.1.2
 CopyRight:jhxia & iflytek_EUED
 ***********************/
 .eui-checkbox,
@@ -882,6 +882,7 @@ CopyRight:jhxia & iflytek_EUED
 .eui-select-box {
   white-space: nowrap;
   display: inline-block;
+  vertical-align: middle;
 }
 .eui-select-box * {
   display: block;
